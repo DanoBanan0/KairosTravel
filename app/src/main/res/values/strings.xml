@@ -5,4 +5,9 @@
     <string name="password_hint">Contraseña</string>
     <string name="btn_login">Ingresar</string>
     <string name="tv_register">¿No tienes cuenta? Regístrate aquí</string>
+    <string name="register_title">Crear Cuenta</string>
+    <string name="btn_register">Registrarse</string>
+    <string name="tv_back_login">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="error_empty_fields">Por favor, llena todos los campos</string>
+    <string name="error_password_match">Las contraseñas no coinciden</string>
 </resources>
