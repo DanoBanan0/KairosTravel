@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "118655204230",
+    "project_id": "kairostravel-a6048",
+    "storage_bucket": "kairostravel-a6048.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118655204230:android:f229f142484b62f7f58a07",
+        "android_client_info": {
+          "package_name": "edu.udb.kairostravel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjcjYg8Md7b5e1sk4t-eQH8rITqxCu350"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
