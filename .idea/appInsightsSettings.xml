@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="edu.udb.kairostravel" />
+                  <option name="mobileSdkAppId" value="1:118655204230:android:f229f142484b62f7f58a07" />
+                  <option name="projectId" value="kairostravel-a6048" />
+                  <option name="projectNumber" value="118655204230" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
