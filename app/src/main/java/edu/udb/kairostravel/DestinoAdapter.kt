@@ -49,7 +49,6 @@ class DestinoAdapter(private val destinosList: MutableList<Destino>) :
             holder.itemView.context.startActivity(intent)
         }
 
-        // CLIC LARGO: Confirmar y Eliminar (Delete)
         holder.itemView.setOnLongClickListener {
             val builder = AlertDialog.Builder(holder.itemView.context)
             builder.setTitle("Eliminar Destino")
@@ -61,7 +60,6 @@ class DestinoAdapter(private val destinosList: MutableList<Destino>) :
                     .addOnSuccessListener {
                         Toast.makeText(holder.itemView.context, "Destino eliminado", Toast.LENGTH_SHORT).show()
 
-                        // SOLUCIÓN: Buscamos el ítem exacto por su ID y lo borramos de forma segura
                         val index = destinosList.indexOfFirst { it.id == destino.id }
                         if (index != -1) {
                             destinosList.removeAt(index)

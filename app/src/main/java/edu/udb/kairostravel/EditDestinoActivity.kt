@@ -35,7 +35,6 @@ class EditDestinoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // REUTILIZAMOS EL DISEÑO DE AGREGAR
         setContentView(R.layout.activity_add_destino)
 
         ivPreview = findViewById(R.id.ivPreview)
@@ -46,22 +45,18 @@ class EditDestinoActivity : AppCompatActivity() {
         val etPrecio = findViewById<EditText>(R.id.etPrecio)
         val etDescripcion = findViewById<EditText>(R.id.etDescripcion)
 
-        // Cambiamos el texto del botón
         btnSaveDestino.text = "Actualizar Destino"
 
-        // Recibir los datos enviados por el Adaptador
         destinoId = intent.getStringExtra("id") ?: ""
         etNombre.setText(intent.getStringExtra("nombre"))
         etPrecio.setText(intent.getDoubleExtra("precio", 0.0).toString())
         etDescripcion.setText(intent.getStringExtra("descripcion"))
         currentImageUrl = intent.getStringExtra("imageUrl") ?: ""
 
-        // Cargar la imagen actual con Glide
         if (currentImageUrl.isNotEmpty()) {
             Glide.with(this).load(currentImageUrl).into(ivPreview)
         }
 
-        // Seleccionar el país en el Spinner
         val paisSeleccionado = intent.getStringExtra("pais")
         val adapter = ArrayAdapter.createFromResource(this, R.array.countries_array, android.R.layout.simple_spinner_item)
         val position = adapter.getPosition(paisSeleccionado)
@@ -96,11 +91,9 @@ class EditDestinoActivity : AppCompatActivity() {
             btnSaveDestino.isEnabled = false
             Toast.makeText(this, "Actualizando datos...", Toast.LENGTH_LONG).show()
 
-            // Si seleccionó una nueva imagen, la subimos primero
             if (newImageUri != null) {
                 uploadNewImageAndUpdate(nombre, pais, precio, descripcion, btnSaveDestino)
             } else {
-                // Si no, actualizamos solo los textos manteniendo la imagen vieja
                 updateFirestore(nombre, pais, precio, descripcion, currentImageUrl, btnSaveDestino)
             }
         }

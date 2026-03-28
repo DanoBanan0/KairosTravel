@@ -28,14 +28,13 @@ class CatalogActivity : AppCompatActivity() {
 
         val fabAdd = findViewById<FloatingActionButton>(R.id.fabAddDestino)
         fabAdd.setOnClickListener {
-            // Mandamos al usuario a la pantalla de crear
             startActivity(Intent(this, AddDestinoActivity::class.java))
         }
     }
 
     override fun onResume() {
         super.onResume()
-        cargarDestinos() // Lo ponemos aquí para que la lista se recargue si agregamos un destino nuevo
+        cargarDestinos()
     }
 
     private fun cargarDestinos() {
@@ -47,7 +46,7 @@ class CatalogActivity : AppCompatActivity() {
                     destino.id = document.id
                     destinosList.add(destino)
                 }
-                adapter.notifyDataSetChanged() // Avisamos al adaptador que hay datos nuevos
+                adapter.notifyDataSetChanged()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Error al cargar datos", Toast.LENGTH_SHORT).show()

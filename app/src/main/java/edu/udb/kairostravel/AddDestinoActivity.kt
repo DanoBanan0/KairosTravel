@@ -18,7 +18,6 @@ class AddDestinoActivity : AppCompatActivity() {
     private var imageUri: Uri? = null
     private lateinit var ivPreview: ImageView
 
-    // Instancias de Firebase
     private val db = FirebaseFirestore.getInstance()
     private val storage = FirebaseStorage.getInstance()
 
