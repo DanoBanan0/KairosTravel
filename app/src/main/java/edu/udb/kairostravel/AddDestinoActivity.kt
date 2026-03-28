@@ -103,6 +103,7 @@ class AddDestinoActivity : AppCompatActivity() {
         db.collection("destinos").document(destinoId).set(destino)
             .addOnSuccessListener {
                 Toast.makeText(this, "¡Destino guardado con éxito!", Toast.LENGTH_SHORT).show()
+                ivPreview.setImageResource(android.R.drawable.ic_menu_gallery)
                 finish()
             }
             .addOnFailureListener { e ->

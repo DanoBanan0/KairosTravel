@@ -47,7 +47,9 @@ class MainActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         Toast.makeText(this, "¡Bienvenido a la Agencia!", Toast.LENGTH_SHORT).show()
 
-                        startActivity(Intent(this, AddDestinoActivity::class.java))
+                        val intent = Intent(this, CatalogActivity::class.java)
+                        startActivity(intent)
+                        finish()
 
                     } else {
                         Toast.makeText(this, "Error al iniciar sesión: ${task.exception?.message}", Toast.LENGTH_LONG).show()
