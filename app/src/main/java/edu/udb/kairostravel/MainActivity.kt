@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
 
-            // Validación Obligatoria: No campos vacíos
+            // Validación
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Por favor, llena todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         Toast.makeText(this, "¡Bienvenido a la Agencia!", Toast.LENGTH_SHORT).show()
 
-                        // TODO: Aquí pondremos el código para ir al Catálogo de destinos en el siguiente paso
+                        startActivity(Intent(this, AddDestinoActivity::class.java))
 
                     } else {
                         Toast.makeText(this, "Error al iniciar sesión: ${task.exception?.message}", Toast.LENGTH_LONG).show()

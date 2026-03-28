@@ -10,4 +10,22 @@
     <string name="tv_back_login">¿Ya tienes cuenta? Inicia sesión</string>
     <string name="error_empty_fields">Por favor, llena todos los campos</string>
     <string name="error_password_match">Las contraseñas no coinciden</string>
+
+    <string name="add_title">Agregar Destino Turístico</string>
+    <string name="hint_name">Nombre del destino</string>
+    <string name="hint_price">Precio del paquete ($)</string>
+    <string name="hint_desc">Descripción (mín. 20 caracteres)</string>
+    <string name="btn_select_image">Seleccionar Imagen</string>
+    <string name="btn_save">Guardar Destino</string>
+
+    <string-array name="countries_array">
+        <item>El Salvador</item>
+        <item>Guatemala</item>
+        <item>Costa Rica</item>
+        <item>México</item>
+        <item>Colombia</item>
+        <item>España</item>
+        <item>Francia</item>
+        <item>Japón</item>
+    </string-array>
 </resources>
